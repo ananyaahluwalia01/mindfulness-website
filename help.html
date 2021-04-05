@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--The div class is for home, so that I can refer to a specific component of my website in my css, without having to make it it's own div tag. (eg. instead of going (.imagehome1 .imagehome2) I can go (.home image))--> 
+<div class=help>
+    
+<head> 
+    <title>Mindfulness</title>
+    <!--this is the reference that links my style sheet to my HTML-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!--this is the code to my nav bar-->
+        <div class="logo">
+            <img src="images/logo1.png" alt="Mindfulness logo" title="Mindfulness logo" class="mindfullogo">
+        </div>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="organisation.html">Organisation</a></li>
+                <li><a href="mindset.html">Mindset</a></li>
+                <li><a href="help.html" class="active">Help</a></li>
+                </ul>
+            </nav>
+
+            <h2>Help</h2>
+    </header> 
+        <!--This is where all the main content of my page will go-->
+        <container>
+            <!--I coded the form below, so that when they submit it, it will open up the websiteviewer's outlook/mail, and will draft an email with their data, to my email. This way, all they'll have to do is hit send-->
+            <form action="mailto:ananyaahluwalia01@gmail.com" method="post" enctype="text/plain">    
+
+                <label for="name">Name</label>
+                    <input type="text" id="name" name="Name" placeholder="eg. Regina Falange">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" placeholder="eg. reginafalangexo@hotmail.com">
+
+                <label for="city">What city do you live in, in New Zealand?</label>
+                <select id="city" name="City">
+                    <option value="Auckland">Auckland</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="help">How can we help?</label>
+                <textarea id="help" name="Reason I'm Emailing" placeholder="Write here..." style="height:200px"></textarea>
+                
+                <input type="submit" value="Submit"/>
+
+            </form>
+        </container>          
+           
+</body>
+</div>    
+</html>
